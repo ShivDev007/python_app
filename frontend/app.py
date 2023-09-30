@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request, jsonify
-import requests  # Add this import to make HTTP requests
+import requests 
 
 app = Flask(__name__)
 
 # Define the URL of the backend API
-backend_api_url = 'http://api:5000/api/data'  # 'api' is the service name in Docker Compose
+backend_api_url = 'http://localhost:5001/api/data'  # 'api' is the service name in Docker Compose
 
 # Define a route for the home page
 @app.route('/', methods=['GET', 'POST'])

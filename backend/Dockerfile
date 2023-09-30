@@ -1,9 +1,7 @@
-FROM python:3.8
+FROM python:latest
 WORKDIR /app
 COPY requirements.txt /app/
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app/
+RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
-ENV NAME World
 CMD ["python", "api.py"]
